@@ -1,3 +1,7 @@
+/* 1. WAP to Find Area And Circumference of Circle
+   2. Find Area of Square formula : a = a2 5. Find Area of Cube formula : a =
+	  6a2 6. Find area of Triangle Formula : A = 1/2 × b × h  */
+
 #include<stdio.h>
 int main(){
 	float r,circle,circumference,square,cube;
