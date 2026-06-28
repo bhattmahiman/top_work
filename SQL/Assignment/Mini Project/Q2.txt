@@ -1,0 +1,5 @@
+INSERT INTO playlists (playlist_id, user_id, name, created_at)
+VALUES
+(1, 1, 'Workout Mix', '2026-06-28 09:00:00'),
+(2, 2, 'Chill Vibes', '2026-06-28 14:30:00'),
+(3, 3, 'Top Hits', '2026-06-28 18:45:00');

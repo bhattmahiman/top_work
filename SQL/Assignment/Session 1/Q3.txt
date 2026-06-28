@@ -1,0 +1,7 @@
+INSERT INTO users (user_id, username, email, followers_count)
+VALUES
+(1, 'mahiman', 'mahiman@example.com', 1250),
+(2, 'john_doe', 'john@example.com', 890),
+(3, 'alice_smith', 'alice@example.com', 1560),
+(4, 'techguru', 'techguru@example.com', 3420),
+(5, 'coder_raj', 'raj@example.com', 670);

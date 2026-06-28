@@ -1,0 +1,17 @@
+DELIMITER //
+
+CREATE PROCEDURE CheckDelivery()
+BEGIN
+    DECLARE order_amount INT DEFAULT 750;
+
+    IF order_amount > 500 THEN
+        SELECT 'Eligible for free delivery' AS Message;
+    ELSE
+        SELECT 'Delivery charges apply' AS Message;
+    END IF;
+END //
+
+DELIMITER ;
+
+
+CALL CheckDelivery();

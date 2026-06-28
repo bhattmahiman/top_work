@@ -1,0 +1,10 @@
+CREATE VIEW TopSpendersView AS
+SELECT 
+    username,
+    order_total
+FROM SpotifyUser
+JOIN FoodOrder
+ON SpotifyUser.user_id = FoodOrder.user_id
+WHERE FoodOrder.order_total > 1000;
+
+SELECT * FROM TopSpendersView;

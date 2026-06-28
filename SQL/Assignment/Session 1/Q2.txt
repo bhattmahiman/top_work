@@ -1,0 +1,1 @@
+CREATE TABLE Users(user_id int PRIMARY KEY,username varchar(200),email varchar(200),followers_count int);

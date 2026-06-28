@@ -1,0 +1,20 @@
+DELIMITER //
+
+CREATE PROCEDURE PrintNumbers()
+BEGIN
+    DECLARE counter INT DEFAULT 1;
+
+    my_loop: LOOP
+        SELECT counter AS Number;
+
+        SET counter = counter + 1;
+
+        IF counter > 5 THEN
+            LEAVE my_loop;
+        END IF;
+    END LOOP;
+END //
+
+DELIMITER ;
+
+CALL `PrintNumbers`();

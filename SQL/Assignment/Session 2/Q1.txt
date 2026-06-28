@@ -1,0 +1,1 @@
+CREATE TABLE restaurants(id int PRIMARY KEY AUTO_INCREMENT,name varchar(100),location varchar(100),rating DECIMAL(2,1));

@@ -1,0 +1,10 @@
+CREATE TABLE Restaurants(id int PRIMARY KEY AUTO_INCREMENT,name varchar(50),cuisine varchar(50),rating DECIMAL(2,1),city varchar(50));
+
+
+INSERT INTO Restaurants (name, cuisine, rating, city)
+VALUES
+('Spice Villa', 'Indian', 4.5, 'Ahmedabad'),
+('Dragon Wok', 'Chinese', 4.2, 'Surat'),
+('Pizza Hub', 'Italian', 4.7, 'Mumbai'),
+('Sushi World', 'Japanese', 4.8, 'Bengaluru'),
+('Taco Fiesta', 'Mexican', 4.3, 'Pune');

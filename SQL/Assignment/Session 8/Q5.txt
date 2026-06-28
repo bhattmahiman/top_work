@@ -1,0 +1,20 @@
+DELIMITER //
+
+CREATE PROCEDURE DivideNumbers()
+BEGIN
+    DECLARE num1 INT DEFAULT 10;
+    DECLARE num2 INT DEFAULT 0;
+    DECLARE result DECIMAL(10,2);
+
+    IF num2 = 0 THEN
+        SELECT 'Cannot divide by zero' AS Message;
+    ELSE
+        SET result = num1 / num2;
+        SELECT result AS Result;
+    END IF;
+END //
+
+DELIMITER ;
+
+
+CALL DivideNumbers();

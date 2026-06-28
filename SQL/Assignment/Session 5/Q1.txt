@@ -1,0 +1,26 @@
+//influencers table create
+CREATE TABLE influencers(influencers_id int PRIMARY KEY, name varchar(200));
+
+//posts table create
+CREATE TABLE posts(post_id int PRIMARY KEY,influencers_id int, caption varchar(200), FOREIGN KEY (influencers_id) REFERENCES influencers(influencers_id));
+
+
+//data insert in influencers
+INSERT INTO influencers (influencers_id, name)
+VALUES
+(1, 'MrBeast'),
+(2, 'Tech Burner'),
+(3, 'CarryMinati');
+
+
+//data insert in posts
+INSERT INTO posts (post_id, influencers_id, caption)
+VALUES
+(101, 1, 'Giving away 100 iPhones!'),
+(102, 1, 'Last to leave the circle wins $500,000!'),
+
+(103, 2, 'Top 5 budget smartphones of 2026'),
+(104, 2, 'Best gadgets you should buy this year'),
+
+(105, 3, 'New roast video is out now!'),
+(106, 3, 'Gaming livestream tonight at 8 PM');

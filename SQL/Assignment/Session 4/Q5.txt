@@ -1,0 +1,1 @@
+SELECT genre,SUM(play_count) AS total_plays FROM playlist GROUP BY genre;

@@ -1,0 +1,18 @@
+DELIMITER //
+
+CREATE PROCEDURE ShowUser()
+BEGIN
+    DECLARE user_name VARCHAR(50);
+    DECLARE user_age INT;
+
+    SET user_name = 'Mahiman';
+    SET user_age = 21;
+
+    SELECT CONCAT('Name: ', user_name) AS Name;
+    SELECT CONCAT('Age: ', user_age) AS Age;
+END //
+
+DELIMITER ;
+
+
+CALL `ShowUser`();

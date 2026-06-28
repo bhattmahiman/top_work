@@ -1,0 +1,22 @@
+CREATE TABLE Cart (
+    cart_id INT PRIMARY KEY,
+    product_name VARCHAR(100),
+    quantity INT,
+    price DECIMAL(10,2)
+);
+
+START TRANSACTION;
+
+INSERT INTO Cart
+VALUES (1, 'Wireless Mouse', 1, 799);
+
+SAVEPOINT sp1;
+
+INSERT INTO Cart
+VALUES (2, 'Mechanical Keyboard', 1, 2499);
+
+ROLLBACK TO SAVEPOINT sp1;
+
+COMMIT;
+
+SELECT * FROM Cart;

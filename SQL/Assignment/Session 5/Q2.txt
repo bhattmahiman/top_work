@@ -1,0 +1,4 @@
+SELECT name AS influencer_name, caption
+FROM influencers 
+INNER JOIN posts 
+ON influencers.influencers_id = posts.influencers_id;

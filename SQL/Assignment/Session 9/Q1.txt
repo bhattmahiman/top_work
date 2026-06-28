@@ -1,0 +1,12 @@
+//Insert a New Order and Commit the Transaction
+
+START TRANSACTION;
+
+INSERT INTO foodorder (order_id,restaurant_id,user_id,order_total)
+VALUES (7, 2,3, 1450.00);
+
+COMMIT;
+
+//Verify the Data
+SELECT * FROM foodorder
+WHERE order_id = 7;

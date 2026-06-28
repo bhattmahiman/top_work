@@ -1,0 +1,22 @@
+CREATE TABLE movies (
+    movie_id INT PRIMARY KEY,
+    movie_name VARCHAR(100),
+    rating DECIMAL(2,1)
+);
+
+INSERT INTO movies (movie_id, movie_name, rating)
+VALUES
+(1, 'Inception', 4.8),
+(2, 'Interstellar', 4.9),
+(3, 'Avatar', 4.2),
+(4, 'Titanic', 3.9),
+(5, 'The Dark Knight', 4.7),
+(6, 'Joker', 4.3);
+
+SELECT movie_name
+FROM movies
+GROUP BY movie_name
+HAVING AVG(rating) > (
+    SELECT AVG(rating)
+    FROM movies
+);

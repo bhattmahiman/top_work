@@ -1,0 +1,1 @@
+SELECT song_name,artist AS singer from playlist;

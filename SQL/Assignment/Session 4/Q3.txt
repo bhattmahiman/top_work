@@ -1,0 +1,1 @@
+SELECT * from playlist WHERE genre='Pop' AND play_count>100;

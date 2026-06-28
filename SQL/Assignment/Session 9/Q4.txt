@@ -1,0 +1,43 @@
+CREATE TABLE Wallet (
+    user_id INT PRIMARY KEY,
+    user_name VARCHAR(100),
+    balance DECIMAL(10,2)
+);
+
+CREATE TABLE Transactions (
+    transaction_id INT PRIMARY KEY,
+    user_id INT,
+    purchase_amount DECIMAL(10,2),
+    FOREIGN KEY (user_id) REFERENCES Wallet(user_id)
+);
+
+INSERT INTO Wallet (user_id, user_name, balance)
+VALUES
+(1, 'Mahiman', 5000.00),
+(2, 'Rahul', 3000.00);
+
+
+//trigger created
+
+DELIMITER //
+
+CREATE TRIGGER deduct_wallet_balance
+AFTER INSERT ON Transactions
+FOR EACH ROW
+BEGIN
+    UPDATE Wallet
+    SET balance = balance - NEW.purchase_amount
+    WHERE user_id = NEW.user_id;
+END //
+
+DELIMITER ;
+
+
+//trigger executed
+
+INSERT INTO Transactions (transaction_id, user_id, purchase_amount)
+VALUES (101, 1, 1200.00);
+
+
+//show result
+SELECT * FROM Wallet;
