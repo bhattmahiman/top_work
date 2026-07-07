@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MovieVerse</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <nav>
+          <div class="logo">
+            <!-- <img src="images/logo.png" alt="Logo" /> -->
+            <i class="fa-solid fa-play"></i>
+
+            <span>MovieVerse</span>
+          </div>
+          <div class="menu">
+            <a href="#">Home</a>
+            <a href="#">Movie</a>
+            <a href="#">TV-Show</a>
+            <a href="#">Celebrities</a>
+            <a href="#">Tranding</a>
+            <a href="#">Reviews</a>
+            <a href="#">News</a>
+          </div>
+          <div class="search">
+            <input
+              type="text"
+              name="search"
+              id="search"
+              placeholder="Search movie,shows,actors..."
+            />
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+          <div class="right-section">
+            <div class="notification">
+              <i class="fa-solid fa-bell"></i>
+            </div>
+            <div class="user">
+              <i class="fa-solid fa-user"></i>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <aside class="sidebar">
+        <nav>
+          <a href="#" class="active">
+            <i class="fa-solid fa-house"></i>
+            <span>Home</span>
+          </a>
+
+          <a href="#">
+            <i class="fa-regular fa-star"></i>
+            <span>Top Rated</span>
+          </a>
+
+          <a href="#">
+            <i class="fa-solid fa-fire"></i>
+            <span>Trending Now</span>
+          </a>
+
+          <a href="#">
+            <i class="fa-regular fa-calendar"></i>
+            <span>Upcoming</span>
+          </a>
+
+          <a href="#">
+            <i class="fa-solid fa-tv"></i>
+            <span>Popular TV Shows</span>
+          </a>
+
+          <a href="#">
+            <i class="fa-regular fa-clock"></i>
+            <span>Most Watched</span>
+          </a>
+
+          <!-- <div class="divider"></div> -->
+          <hr width="250" />
+
+          <a href="#">
+            <i class="fa-regular fa-bookmark"></i>
+            <span>My Watchlist</span>
+          </a>
+
+          <a href="#">
+            <i class="fa-regular fa-pen-to-square"></i>
+            <span>My Reviews</span>
+          </a>
+
+          <a href="#">
+            <i class="fa-solid fa-list"></i>
+            <span>My Lists</span>
+          </a>
+
+          <a href="#">
+            <i class="fa-solid fa-user-group"></i>
+            <span>Friends Activity</span>
+          </a>
+
+          <!-- <div class="divider"></div> -->
+          <hr width="250" />
+
+          <a href="#">
+            <i class="fa-solid fa-gear"></i>
+            <span>Settings</span>
+          </a>
+
+          <a href="#">
+            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            <span>Logout</span>
+          </a>
+        </nav>
+      </aside>
+
+      <main class="main-content">
+        <!-- Hero -->
+        <section class="hero">
+          <div class="hero-slider">
+            <!-- first movie  -->
+            <div class="movie-card active">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQWeS7NhTou6Wpv6Qftqk3mA1kTWVlmTd9s8QobGAOYA&s=10"
+                alt="Dune Part Two"
+              />
+
+              <div class="overlay">
+                <h1>DUNE PART TWO</h1>
+
+                <div class="movie-info">
+                  <span>2024</span>
+                  <span>PG-13</span>
+                  <span>2h 46m</span>
+                </div>
+
+                <p class="genre">Sci-Fi • Adventure</p>
+
+                <div class="hero-buttons">
+                  <button class="btn-primary">
+                    <i class="fa-solid fa-play"></i>
+                    Watch Trailer
+                  </button>
+
+                  <button class="btn-outline">
+                    <i class="fa-solid fa-plus"></i>
+                    Watchlist
+                  </button>
+
+                  <button class="btn-outline">
+                    <i class="fa-solid fa-star"></i>
+                    Rate Now
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- second movie  -->
+            <div class="movie-card">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT-mmkj6vVxzVGf1WS-fpW48fpvv8yWbvnmYi5cRyu_kYcdC-tl1UVhBs&s=10"
+                alt="avengers endgame"
+              />
+
+              <div class="overlay">
+                <h1>AVENGERS ENDGAME</h1>
+
+                <div class="movie-info">
+                  <span>2019</span>
+                  <span>PG-13</span>
+                  <span>3h 1m</span>
+                </div>
+
+                <p class="genre">Sci-Fi • Adventure</p>
+
+                <div class="hero-buttons">
+                  <button class="btn-primary">
+                    <i class="fa-solid fa-play"></i>
+                    Watch Trailer
+                  </button>
+
+                  <button class="btn-outline">
+                    <i class="fa-solid fa-plus"></i>
+                    Watchlist
+                  </button>
+
+                  <button class="btn-outline">
+                    <i class="fa-solid fa-star"></i>
+                    Rate Now
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- third movie  -->
+            <div class="movie-card">
+              <img
+                src="https://cdn.mos.cms.futurecdn.net/BYQpSzT2FZkLA7w2mYMgd.jpg"
+                alt="avengers doomsday"
+              />
+
+              <div class="overlay">
+                <h1>AVENGERS DOOMSDAY</h1>
+
+                <div class="movie-info">
+                  <span>2026</span>
+                  <span>PG-13</span>
+                  <span>3h 45m</span>
+                </div>
+
+                <p class="genre">Sci-Fi • Action • Adventure</p>
+
+                <div class="hero-buttons">
+                  <button class="btn-primary">
+                    <i class="fa-solid fa-play"></i>
+                    Watch Trailer
+                  </button>
+
+                  <button class="btn-outline">
+                    <i class="fa-solid fa-plus"></i>
+                    Watchlist
+                  </button>
+
+                  <button class="btn-outline">
+                    <i class="fa-solid fa-star"></i>
+                    Rate Now
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- forth movie  -->
+            <div class="movie-card">
+              <img
+                src="https://m.media-amazon.com/images/M/MV5BODkyY2QzOWUtNGU5OS00NWZlLWI2ZmUtNzQ1NTFhZmIxZTc1XkEyXkFqcGc@._V1_.jpg"
+                alt="Avengers: Secret Wars"
+              />
+
+              <div class="overlay">
+                <h1>AVENGERS: SECRET WARS</h1>
+
+                <div class="movie-info">
+                  <span>2027</span>
+                  <span>PG-13</span>
+                  <span>TBD</span>
+                </div>
+
+                <p class="genre">Sci-Fi • Action • Adventure</p>
+
+                <div class="hero-buttons">
+                  <button class="btn-primary">
+                    <i class="fa-solid fa-play"></i>
+                    Watch Trailer
+                  </button>
+
+                  <button class="btn-outline">
+                    <i class="fa-solid fa-plus"></i>
+                    Watchlist
+                  </button>
+
+                  <button class="btn-outline">
+                    <i class="fa-solid fa-star"></i>
+                    Rate Now
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+        </section>
+        <!-- Movies -->
+        <section class="trending">
+          <div class="section-header">
+            <h2>Trending Now</h2>
+            <button class="view-btn">View All</button>
+          </div>
+
+          <div class="movie-grid">
+            <!-- Card 1 -->
+            <div class="movie-item">
+              <img
+                src="https://image.tmdb.org/t/p/w500/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg"
+                alt=""
+              />
+              <div class="movie-details">
+                <h3>Deadpool & Wolverine</h3>
+
+                <div class="movie-meta">
+                  <span>2024</span>
+                  <span><i class="fa-solid fa-star"></i> 8.8</span>
+                </div>
+
+                <p>Sci-Fi • Adventure</p>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="movie-item">
+              <img
+                src="https://image.tmdb.org/t/p/w500/qNBAXBIQlnOThrVvA6mA2B5ggV6.jpg"
+                alt=""
+              />
+              <div class="movie-details">
+                <h3>Super Mario Bros. Movie</h3>
+
+                <div class="movie-meta">
+                  <span>2024</span>
+                  <span><i class="fa-solid fa-star"></i> 8.3</span>
+                </div>
+
+                <p>Action • Comedy</p>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="movie-item">
+              <img
+                src="https://image.tmdb.org/t/p/w500/gKkl37BQuKTanygYQG1pyYgLVgf.jpg"
+                alt=""
+              />
+              <div class="movie-details">
+                <h3>Kingdom</h3>
+
+                <div class="movie-meta">
+                  <span>2024</span>
+                  <span><i class="fa-solid fa-star"></i> 8.5</span>
+                </div>
+
+                <p>Action • Drama</p>
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="movie-item">
+              <img
+                src="https://image.tmdb.org/t/p/w500/3m0j3hCS8kMAaP9El6Vy5Lqnyft.jpg"
+                alt=""
+              />
+              <div class="movie-details">
+                <h3>Inside Out 2</h3>
+
+                <div class="movie-meta">
+                  <span>2024</span>
+                  <span><i class="fa-solid fa-star"></i> 8.1</span>
+                </div>
+
+                <p>Animation • Family</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <aside class="top-cast">
+        <h2 style="color: white">Top Cast</h2>
+
+        <div class="cast-list">
+          <div class="cast-card">
+            <img
+              src="https://m.media-amazon.com/images/M/MV5BZTIyZWY4ZjktOGJiZi00NGFkLTllMjctZjJjMmNiMjIxOTY2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
+              alt="Timothée Chalamet"
+            />
+            <div class="cast-info">
+              <h4>Timothée</h4>
+              <p>Chalamet</p>
+            </div>
+          </div>
+
+          <div class="cast-card">
+            <img
+              src="https://i.pinimg.com/originals/11/2a/3d/112a3d0984a421210afb9362220c3f40.png"
+              alt="Zendaya"
+            />
+            <div class="cast-info">
+              <h4>Zendaya</h4>
+            </div>
+          </div>
+
+          <div class="cast-card">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/0/05/Austin_Butler_at_the_2025_Cannes_Film_Festival_02.jpg"
+              alt="Austin Butler"
+            />
+            <div class="cast-info">
+              <h4>Austin</h4>
+              <p>Butler</p>
+            </div>
+          </div>
+
+          <div class="cast-card">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQf7OGQU2JoW4ozhe8hXVBrEvySphHDoyd5uWTybsOBaA&s=10"
+              alt="Florence Pugh"
+            />
+            <div class="cast-info">
+              <h4>Florence</h4>
+              <p>Pugh</p>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>

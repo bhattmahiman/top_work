@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neon Service Cards</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      body {
+        background: #2c2c2c;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+
+      .container {
+        display: flex;
+        gap: 35px;
+        flex-wrap: wrap;
+      }
+
+      .card {
+        position: relative;
+        width: 260px;
+        height: 360px;
+        background: #2f2f2f;
+        border-radius: 12px;
+        overflow: hidden;
+        text-align: center;
+      }
+
+      .card-blue {
+        border: 5px solid #1e90ff;
+      }
+
+      .card-pink {
+        border: 5px solid #ff1975;
+      }
+
+      .card-green {
+        border: 5px solid #8cff00;
+      }
+
+      /* Top Left Shape */
+      .top {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 105px;
+        height: 95px;
+        background: #2d8cff;
+        border-bottom-right-radius: 35px;
+      }
+
+      /* White/grey curve */
+      .top::before {
+        content: "";
+        position: absolute;
+        right: -35px;
+        top: 0;
+        width: 35px;
+        height: 35px;
+        border-top-left-radius: 35px;
+        box-shadow: -10px -10px 0 transparent;
+      }
+
+      /* Bottom curve */
+      .top::after {
+        content: "";
+        position: absolute;
+        bottom: -35px;
+        left: 0;
+        width: 35px;
+        height: 35px;
+        border-top-left-radius: 35px;
+        box-shadow: -10px -10px 0 transparent;
+      }
+
+      .card-blue .top {
+        background: #1e90ff;
+      }
+
+      .card-pink .top {
+        background: #ff1975;
+      }
+
+      .card-green .top {
+        background: #8cff00;
+      }
+
+      /* Icon */
+      .icon {
+        width: 58px;
+        height: 58px;
+        background: #2f2f2f;
+        border-radius: 12px;
+        color: #fff;
+        font-size: 32px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 16px;
+        left: 16px;
+        z-index: 2;
+      }
+
+      /* Content */
+
+      .content {
+        margin-top: 120px;
+        padding: 20px;
+        color: white;
+      }
+
+      .content h2 {
+        font-size: 28px;
+        letter-spacing: 1px;
+        margin-bottom: 20px;
+      }
+
+      .content p {
+        color: #ddd;
+        font-size: 15px;
+        line-height: 1.7;
+        margin-bottom: 30px;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 12px 28px;
+        border-radius: 25px;
+        text-decoration: none;
+        color: #fff;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+
+      .card-blue .btn {
+        background: #1e90ff;
+      }
+
+      .card-pink .btn {
+        background: #ff1975;
+      }
+
+      .card-green .btn {
+        background: #8cff00;
+        color: #222;
+      }
+
+      .btn:hover {
+        transform: scale(1.08);
+      }
+
+      @media (max-width: 900px) {
+        .container {
+          justify-content: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card card-blue">
+        <div class="top">
+          <div class="icon">🛠</div>
+        </div>
+
+        <div class="content">
+          <h2>DESIGN</h2>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry.
+          </p>
+
+          <a href="#" class="btn">READ MORE</a>
+        </div>
+      </div>
+
+      <div class="card card-pink">
+        <div class="top">
+          <div class="icon">&lt;/&gt;</div>
+        </div>
+
+        <div class="content">
+          <h2>DEVELOPMENT</h2>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry.
+          </p>
+
+          <a href="#" class="btn">READ MORE</a>
+        </div>
+      </div>
+
+      <div class="card card-green">
+        <div class="top">
+          <div class="icon">🚀</div>
+        </div>
+
+        <div class="content">
+          <h2>LAUNCH</h2>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry.
+          </p>
+
+          <a href="#" class="btn">READ MORE</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
