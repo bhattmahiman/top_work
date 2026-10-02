@@ -1,0 +1,5 @@
+Task 3: Removing setState()
+
+I removed the `setState()` call from the counter button's `onPressed` function. After pressing the button, the counter did not update on the screen because changing a variable alone does not tell Flutter to rebuild the widget. The `setState()` method notifies Flutter that the state has changed and causes the affected widget to rebuild.
+
+After identifying the problem, I restored `setState()` so the counter could update correctly.
