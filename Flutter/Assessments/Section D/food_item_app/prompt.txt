@@ -1,0 +1,6 @@
+Write a Flutter screen using a StatefulWidget that displays a list of ordered food items. 
+Each item should show the item name, quantity, and unit price using ListView.builder. 
+Calculate and display the total order amount dynamically based on the items in the list. 
+Add a "Place Order" button that uses setState() to update an order status Text widget to "Order Placed ›" when tapped. 
+Handle the edge case where the item list is empty by displaying "Your cart is empty" centered on the screen instead of an empty ListView.
+Keep the code simple and beginner-friendly.
