@@ -1,53 +1,46 @@
 import 'package:flutter/material.dart';
-// import 'package:my_music_theme/food_home_screen.dart';
-import 'package:my_music_theme/home_screen.dart';
-// import 'package:my_music_theme/playlist_screen.dart';
-// import 'package:my_music_theme/restaurant_list_screen.dart';
-// import 'widgets/song_tile.dart';
+
+import 'screens_2/splash_screen.dart';
+import 'screens_2/login_screen.dart';
+import 'screens_2/dashboard_screen.dart';
 
 void main() {
-  runApp(const MyMusicTheme());
+  runApp(const MyApp());
 }
 
-class MyMusicTheme extends StatelessWidget {
-  const MyMusicTheme({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  final bool isLoggedIn = false;
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'MyMusicTheme',
       debugShowCheckedModeBanner: false,
+      title: 'PurpleSpace',
 
-      // Global app theme
       theme: ThemeData(
-        primaryColor: Colors.deepPurple,
-        fontFamily: 'Poppins',
-
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: Colors.deepPurple,
-          primary: Colors.deepPurple,
-          secondary: Colors.orange,
-        ),
-
-        // Global ElevatedButton style
-        elevatedButtonTheme: ElevatedButtonThemeData(
-          style: ElevatedButton.styleFrom(
-            backgroundColor: Colors.green,
-            foregroundColor: Colors.white,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(15),
-            ),
-            padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
-          ),
-        ),
-
-        appBarTheme: const AppBarTheme(
-          backgroundColor: Colors.deepPurple,
-          foregroundColor: Colors.white,
-        ),
+        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF6D28D9)),
+        fontFamily: 'Roboto',
+        useMaterial3: true,
       ),
 
-      home: MyHomeScreen(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const SplashScreen(),
+        '/login': (context) => const LoginScreen(),
+        '/dashboard': (context) => const DashboardScreen(),
+      },
+
+      onGenerateRoute: (settings) {
+        if (settings.name == '/checkLogin') {
+          return MaterialPageRoute(
+            builder: (_) =>
+                isLoggedIn ? const DashboardScreen() : const LoginScreen(),
+          );
+        }
+        return null;
+      },
     );
   }
 }

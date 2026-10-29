@@ -1,0 +1,18 @@
+Assignment: Managing Favorite Playlists Using Provider
+
+Objective: To implement state management in Flutter using the Provider package.
+
+Implementation:
+- Created a `FavoritePlaylistProvider` class that extends `ChangeNotifier`.
+- Used a list of strings to store favorite playlist names.
+- Implemented `toggleFavorite()` to add or remove a playlist from favorites.
+- Implemented `isFavorite()` to check whether a playlist is already marked as a favorite.
+- Implemented `removeFavorite()` to remove a playlist from the favorites list.
+- Used `notifyListeners()` to update the UI whenever the favorites list changes.
+- Registered the provider at the root of the app so playlist widgets can access the shared state.
+
+Customization for Pulsefy:
+
+I added a `toggleFavorite()` method so users can tap a heart icon to add a playlist to favorites and tap it again to remove it. This provides a simple, convenient interaction for a music player.
+
+Result: Favorite playlists can be managed using Provider and shared across widgets. The current implementation stores favorites in memory, so they reset when the app restarts.
